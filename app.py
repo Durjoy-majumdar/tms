@@ -4,23 +4,24 @@ app=Flask(__name__)
 
 #Rendering a route(Normal Route)
 @app.route("/")
+def landing():
+    return render_template("landing.html")
+
+@app.route("/home")
 def sample():
     return render_template("home.html")
 
-#Rendering/Route -Dynamic Routing
-#@app.route("/<name>")
-#def sample1(name):
-#    return f'Hi {name}'
+@app.route("/login")
+def login():
+    return render_template("/login.html")
 
-#template rendering
-#@app.route("/template")
-#def sample2():
-#    return render_template('index.html')
+@app.route("/register")
+def register():
+    return render_template("/register.html")
 
-#context to template rendering
-#@app.route("/template1/name")
-#def sample3(name):
-#    return render_template("index2.html", name=name);
+@app.route("/aboutus")
+def aboutus():
+    return render_template("/aboutus.html")
 
 if __name__ == '__main__':
     app.run()

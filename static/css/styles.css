@@ -15,3 +15,21 @@
   object-fit: contain;
   transform: scale(1);
 }
+.button{
+  padding: 5px;
+  position: relative;
+  border-left: 3px;
+  margin-left: 10px;
+  border-radius: 8px;
+}
+#login .button:hover{
+ color: #000000;
+ background-color: #fbff00 !important;
+}
+#login #regb{
+  background-color: #33fff3;
+}
+
+#login #logb{
+  background-color: #33d7ff;
+}
